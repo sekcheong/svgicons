@@ -1,0 +1,65 @@
+﻿@charset "UTF-8";
+
+$phi: 1.61803398875;
+
+$font-size: 13px !default;
+$font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+
+$primary-color: #3292e9 !default;
+
+$text-color: #000000 !default;
+$text-background-color: #ffffff !default;
+
+$strong-color: blue !default;
+$strong-fong-weight: bold !default;
+
+$disabled-color: rgba($text-color, 0.3) !default;
+$disabled-background-color: $text-background-color !default;
+
+$btn-color: $text-background-color !default;
+$btn-background-color: $primary-color !default;
+/*$btn-border-width: 1px !default;
+$btn-border-color: red !default;*/
+$btn-hover-color: $btn-color !default;
+$btn-hover-background-color: darken($btn-background-color, 10%) !default;
+$btn-active-color: $btn-color !default;
+$btn-active-background-color: darken($btn-background-color, 20%) !default;
+$btn-disabled-color: rgba($btn-color,0.3) !default;
+$btn-disabled-background-color: rgba($btn-background-color, 0.3) !default;
+
+
+$menu-color: $text-color !default;
+$menu-background-color: $text-background-color !default;
+$menu-hover-color: $text-color !default;
+$menu-hover-background-color: rgba($primary-color, 0.2) !default;
+$menu-active-color: $text-color !default;
+$menu-active-background-color: rgba($primary-color, 0.7) !default;
+$menu-disabled-color: rgba($menu-color,0.3) !default;
+$menu-box-shadow: 4px 4px 4px #a0a0a0 !default;
+
+$input-color: $text-color !default;
+$input-background-color: $text-background-color !default;
+$input-disabled-color: rgba($input-color, 0.5) !default;
+$input-disabled-background-color: rgba($input-background-color, 0.5) !default;
+$input-box-shadow-focused-glow-color: rgba(lighten($primary-color, 15%), 0.80) !default;
+$input-box-shadow-focused: 0 0 5px $input-box-shadow-focused-glow-color !default;
+
+$input-btn-color: darken($primary-color,15%) !default;
+$input-btn-background-color: $btn-background-color !default;
+$input-btn-hover-color: $input-btn-color !default;
+$input-btn-hover-background-color: $btn-hover-background-color !default;
+$input-btn-active-color: lighten($input-btn-color, 15%) !default;
+$input-btn-active-background-color: darken($input-btn-background-color, 20%) !default;
+$input-btn-disabled-color: rgba($input-btn-color, 0.3) !default;
+$input-btn-disabled-background-color: rgba($input-btn-background-color, 0.5) !default;
+
+$border-radius: 4px !default;
+$border-color: #a0a0a0 !default;
+$border-color-focused: darken($border-color, 20%) !default;
+$border-color-disabled: rgba($border-color, 0.5) !default;
+$border-width: 1px !default;
+
+$line-height-default: $font-size * $phi !default;
+$line-height-input: $font-size * $phi + 2*$border-width !default; // + 4*$border-width !default;
+
+$height-input-menu-max: 6*$line-height-input !default;

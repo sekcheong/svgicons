@@ -1,0 +1,90 @@
+﻿@charset "UTF-8";
+
+@import '../base/base';
+
+div.ux-menu {
+	@extend .ux-container;
+	//disable text select
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+
+	//disable user drag-drop
+	-webkit-user-drag: none;
+	user-drag: none;
+
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	line-height: $line-height-default;
+	box-sizing: border-box;
+	color: $text-color;
+	border: $border-width solid;
+	border-color: $border-color;
+	border-radius: $border-radius;
+	box-shadow: $menu-box-shadow;
+	position: absolute;
+	overflow-x: hidden;
+	overflow-y: auto; 
+	z-index: 1000;
+}
+
+// remove the dotted line box around the focused element
+div.ux-menu:focus {
+	outline: none;
+}
+
+ul.ux-menu {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+	background: $text-background-color;
+	font-size: $font-size;
+	
+	li {
+		margin: 0;
+		position: relative;
+		border: none;
+		background-color: inherit;
+		white-space: nowrap;
+
+		a {
+			padding: 2px 4px 2px 4px;
+			display: block;
+			color: $text-color;
+			outline: 0;
+			text-decoration: none;
+			cursor: default;
+
+			&:hover {
+				color: $menu-hover-color;
+				background-color: $menu-hover-background-color;
+			}
+
+			&.selected, :active {
+				color: $menu-active-color;
+				background-color: $menu-active-background-color;
+			}
+		}
+
+		&:first-child {
+			padding-top: $border-radius;
+		}
+
+		&:last-child {
+			padding-bottom:$border-radius;
+		}
+	}
+
+
+	li.disabled, li[disabled] {
+		a {
+			color: $disabled-color;
+		}
+	}
+
+	strong {
+		color: $strong-color;
+		font-weight: $strong-fong-weight;
+	}
+}

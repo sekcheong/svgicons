@@ -1,0 +1,52 @@
+﻿@charset "UTF-8";
+@import '../base/base';
+
+.ux-btn {
+	display: inline-block;
+	font-family: $font-family;
+	text-align: center;
+	padding: 0; //setting the padding prevents the depress effect
+	cursor: pointer;
+	margin-bottom: 0;
+	white-space: nowrap;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: none;
+	border: 0;
+}
+
+button.ux-btn {
+	@extend .ux-btn;
+	font-size: $font-size;
+	color: $btn-color;
+	background: $btn-background-color;
+	vertical-align: central;
+	border-radius: $border-radius;
+	/*border: $btn-border-width solid $btn-border-color;*/
+	height: ($font-size*$phi*2) - $font-size;
+	//padding-left: ($font-size*$phi) - $font-size;
+	//padding-right: ($font-size*$phi) - $font-size;
+	
+	//use the :not() operator to exclude hover style with disabled element
+	&:hover:not([disabled]) {
+		outline: none;
+		color: $btn-hover-color;
+		background-color: $btn-hover-background-color;
+	}
+
+	&:active:not([disabled]) {
+		color: $btn-active-color;
+		background-color: $btn-active-background-color;
+		outline: none;
+		box-shadow: none;
+	}
+
+	&:disabled {
+		color: $btn-disabled-color;
+		background: $btn-disabled-background-color;
+		outline: none;
+		cursor: default;
+	}
+}

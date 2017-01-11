@@ -1,0 +1,96 @@
+﻿@charset "UTF-8";
+@import '../base/base';
+
+
+div.ux-input {
+	@extend .ux-container-inline;
+}
+
+
+div.ux-input-menu {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	max-height: $height-input-menu-max;
+}
+
+
+input.ux-input[type=text]::-ms-clear {
+	//disable IE clear 'x' button
+	display: none; 
+}
+
+
+input.ux-input, input.ux-input[type=text] {
+	font-family: $font-family;
+	border: $border-width solid $border-color;
+	border-radius: $border-radius;
+	padding-left: 2px + $border-radius;
+	font-size: $font-size;
+	line-height: $line-height-input;
+	height: $line-height-input;
+	color: $input-color;
+	background-color: $input-background-color;
+
+
+	&:focus:not([disabled]) {
+		box-shadow: $input-box-shadow-focused;
+		border-color: $border-color-focused;
+		//remove the focus box in safari
+		outline-color: transparent;
+		outline-style: none;
+	}
+
+	&:disabled {
+		color: $input-disabled-color;
+		background-color: $input-disabled-background-color;
+		border-color: $border-color-disabled;
+	}
+}
+
+
+input.ux-input-btn, input.ux-input-btn[type=text] {
+	@extend input.ux-input;
+	border-radius: $border-radius 0 0 $border-radius;
+	border-right-width: 0;
+}
+
+
+input.ux-input[ux-state="open"] {
+	border-bottom-left-radius: 0;
+}
+
+
+button.ux-input-btn {
+	@extend .ux-btn;
+	border-radius: 0 $border-radius $border-radius 0;
+	background: $input-btn-background-color;
+	border-left: none;
+	box-shadow: none;
+	vertical-align: top;
+	color: $input-btn-color;
+	padding:0;
+	//use the :not() operator to exclude hover style with disabled element
+	&:hover:not([disabled]) {
+		background-color: $input-btn-hover-background-color;
+		color: $input-btn-hover-color;
+	}
+
+	&:active:not([disabled]) {
+		background-color: $input-btn-active-background-color;
+		color: $input-btn-active-color;
+	}
+
+	&:before {
+		content: "▼";
+	}
+
+	&:disabled {
+		color: $input-btn-disabled-color;
+		background: $input-btn-disabled-background-color;
+		cursor: default;
+	}
+}
+
+button.ux-input-btn[ux-state="open"] {
+	border-bottom-right-radius: 0;
+}

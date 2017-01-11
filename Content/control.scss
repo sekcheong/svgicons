@@ -1,0 +1,245 @@
+
+$input-height: 28px;
+$disabled-color: #e6e6e6;
+$hover-background: #ededed;
+
+div.ui-menu {
+	padding: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	border: 1px solid;
+	border-color: #a0a0a0;
+	color: black;
+	position: absolute;
+	z-index: 1000;
+}
+
+
+div.ui-menu-dropdown {
+	max-height: $input-height*7;
+}
+
+// remove the dotted line box around the focused element
+div.ui-menu:focus {
+	outline: none;
+}
+
+ul.ui-menu {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+	background: #ffffff;
+	font-size: 10pt;
+
+	li {
+		margin: 0;
+		position: relative;
+		border: none;
+		background-color: #ffffff;
+		white-space: nowrap;
+
+		strong {
+			color: blue;
+			font-weight: bold;
+		}
+
+		a {
+			padding-top: 2px;
+			padding-bottom: 2px;
+			padding-left: 4px;
+			padding-right: 4px;
+			color: black;
+			display: block;
+			text-decoration: none;
+			outline: 0;
+			cursor: default;			
+			&:hover {  //reference to parent
+				background-color: $hover-background;
+			}
+		}
+
+		a.selected {
+			background-color: #d1e1fe;
+		}
+	}
+
+	li.disabled {
+		a {
+			color: $disabled-color;
+		}
+	}
+}
+
+
+
+.btn {
+	display: inline-block;
+	padding: 0; //setting the padding prevents the depress effect
+	text-align: center;
+	cursor: pointer;
+	margin-bottom: 0;
+	white-space: nowrap;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+}
+
+
+
+input.ui-input {
+	border: 1px solid #a0a0a0;
+	border-radius: 4px 4px 4px 4px;
+	font-size: 10pt;
+	height: $input-height;
+}
+
+input.ui-input-btn {
+	@extend input.ui-input;	
+	border-radius: 4px 0 0 4px;
+}
+
+
+button.ui-input-btn {
+	@extend .btn;
+	border: 1px solid #a0a0a0;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-color: #0094ff;
+	background: #0094ff;
+	border-left: none;
+	box-shadow: none;	
+	color:#474cae;
+}
+
+
+button.ui-input-btn:hover {
+	background-color: #006bff;
+}
+
+
+.ui-container {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+.ui-container-inline {
+	border: none;
+	padding: 0;
+	margin: 0;
+	display: inline;
+	white-space: nowrap;
+}
+
+
+div.ui-view {
+	border: none;
+	padding: 0;
+	margin: 0;
+	border-radius: 4px;
+	box-shadow: 5px 5px 5px grey;
+}
+
+
+div.ui-header {
+	height: 30px;
+	position: relative;
+	border: 1px solid #1e9cef;
+	background: #1e9cef;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+
+
+div.ui-client-area {
+	border-top: none;
+	position: relative;
+	border-left: 1px solid #a0a0a0;
+	border-right: 1px solid #a0a0a0;
+	border-bottom: 1px solid #a0a0a0;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	padding: 5px;
+	background: #ededed;
+}
+
+//disable IE clear 'x' button on all text field
+input[type=text]::-ms-clear {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*ul.topnav li a{
+	padding: 10px 5px;
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	float: left;
+	border:none;
+}
+
+ul.topnav li a:hover{
+	background-color:#a0a0a0;
+	border-top:1px;
+	border-bottom:1px;
+	border-color:dimgray
+}
+
+ul.topnav li span { //--Drop down trigger styles--
+	width: 17px;
+	height: 35px;
+	float: left;	
+}
+
+ul.topnav li span.subhover {
+	background-position: center bottom; 
+	cursor: pointer;
+
+}*/
+
+/*--Hover effect for trigger--*/
+
+/*ul.topnav li ul.subnav {
+	list-style: none;
+	position: absolute; //--Important - Keeps subnav from affecting main navigation flow--
+	left: 0; top: 35px;
+	background: #333;
+	margin: 0; 
+	padding: 0;
+	display: none;
+	float: left;
+	width: 170px;
+	border: 1px solid #111;
+}
+
+ul.topnav li ul.subnav li{
+	margin: 0; 
+	padding: 0;
+	border-top: 1px solid #252525; //--Create bevel effect--
+	border-bottom: 1px solid #444; //--Create bevel effect--
+	clear: both;
+	width: 170px;
+}
+
+html ul.topnav li ul.subnav li a {
+	float: left;
+	width: 145px;
+	//background: #333 url(dropdown_linkbg.gif) no-repeat 10px center;
+	padding-left: 20px;
+}
+
+html ul.topnav li ul.subnav li a:hover { //--Hover effect for subnav links--
+	//background: #222 url(dropdown_linkbg.gif) no-repeat 10px center; 
+}*/

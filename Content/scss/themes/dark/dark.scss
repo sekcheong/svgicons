@@ -1,0 +1,22 @@
+﻿@charset "UTF-8";
+
+
+$primary-color:  #CDDC39;
+
+$text-color: white;
+$text-background-color: #444444;
+
+$strong-color: #3292e9 ;
+
+$border-radius: 4px;
+
+$border-color: $primary-color;
+$border-color-focused: lighten($border-color, 20%);
+
+$line-height-default: 18px;
+$line-height-input: 21px;
+
+$menu-box-shadow: none;  
+
+
+@import '../../controls';

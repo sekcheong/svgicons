@@ -1,0 +1,10 @@
+﻿@charset "UTF-8";
+
+$color-red: #f44336;
+$color-pink: #e91e63;
+
+/*If you’re not using the material palette out of the box, add black to get to 700 from 500 
+in 12.5% gradations. So, 500 +12.5% to 600, then +12.5% to 700 black should take you in 
+the ballpark of 700. Same way add +12.5% white to take it to 400, and 12.5% white again 
+to go to 300. This is a rough approximation, please use your intuition. The material 
+palette is actually more intuitive than scientifically additive or subtractive.*/

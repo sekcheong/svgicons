@@ -1,0 +1,55 @@
+﻿@charset "UTF-8";
+@import 'base.scss';
+
+.ux-container {
+	font-family: $font-family;
+	text-rendering: optimizeLegibility;
+	-moz-font-feature-settings: "kern", "liga";
+	-webkit-font-feature-settings: "kern", "liga";
+	font-feature-settings: "kern", "liga";
+	border: none;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	color:color-shade(#ff00ff,1);
+}
+
+.ux-container-inline {
+	@extend .ux-container;
+	display: inline-block;
+	white-space: nowrap;
+}
+
+.ux-dragging {
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	background-color: $menu-hover-background-color;
+}
+
+div.ux-measure {
+	font:inherit;
+	display:inline-block;
+	white-space:normal;
+}
+
+
+/*div.primary {
+	width:81px;
+	height:50px;
+	background-color:$primary;
+}
+
+div.primary-600 {
+	width: 81px;
+	height: 50px;
+	background-color: mix(black, $primary, 30.5%);
+}
+
+div.primary-700 {
+	width: 81px;
+	height: 50px;
+	background-color: mix(black, mix(black, $primary, 12.5%), 12.5%);
+}*/
+

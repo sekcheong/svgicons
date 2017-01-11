@@ -1,0 +1,282 @@
+﻿@charset "UTF-8";
+/*If you’re not using the material palette out of the box, add black to get to 700 from 500 
+in 12.5% gradations. So, 500 +12.5% to 600, then +12.5% to 700 black should take you in 
+the ballpark of 700. Same way add +12.5% white to take it to 400, and 12.5% white again 
+to go to 300. This is a rough approximation, please use your intuition. The material 
+palette is actually more intuitive than scientifically additive or subtractive.*/
+/*$btn-border-width: 1px !default;
+$btn-border-color: red !default;*/
+/*$btn-border-width: 1px !default;
+$btn-border-color: red !default;*/
+.ux-container, .ux-container-inline, div.ux-input, div.ux-menu {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  text-rendering: optimizeLegibility;
+  -moz-font-feature-settings: "kern", "liga";
+  -webkit-font-feature-settings: "kern", "liga";
+  font-feature-settings: "kern", "liga";
+  border: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  color: color-shade(#ff00ff, 1);
+}
+
+.ux-container-inline, div.ux-input {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.ux-dragging {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: rgba(205, 220, 57, 0.2);
+}
+
+div.ux-measure {
+  font: inherit;
+  display: inline-block;
+  white-space: normal;
+}
+
+/*div.primary {
+	width:81px;
+	height:50px;
+	background-color:$primary;
+}
+
+div.primary-600 {
+	width: 81px;
+	height: 50px;
+	background-color: mix(black, $primary, 30.5%);
+}
+
+div.primary-700 {
+	width: 81px;
+	height: 50px;
+	background-color: mix(black, mix(black, $primary, 12.5%), 12.5%);
+}*/
+/*$btn-border-width: 1px !default;
+$btn-border-color: red !default;*/
+.ux-btn, button.ux-btn, button.ux-input-btn {
+  display: inline-block;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  text-align: center;
+  padding: 0;
+  cursor: pointer;
+  margin-bottom: 0;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 0;
+}
+
+button.ux-btn, button.ux-input-btn {
+  font-size: 13px;
+  color: #444444;
+  background: #CDDC39;
+  vertical-align: central;
+  border-radius: 4px;
+  /*border: $btn-border-width solid $btn-border-color;*/
+  height: 29.06888px;
+}
+
+button.ux-btn:hover:not([disabled]), button.ux-input-btn:hover:not([disabled]) {
+  outline: none;
+  color: #444444;
+  background-color: #b2c022;
+}
+
+button.ux-btn:active:not([disabled]), button.ux-input-btn:active:not([disabled]) {
+  color: #444444;
+  background-color: #89951a;
+  outline: none;
+  box-shadow: none;
+}
+
+button.ux-btn:disabled, button.ux-input-btn:disabled {
+  color: rgba(68, 68, 68, 0.3);
+  background: rgba(205, 220, 57, 0.3);
+  outline: none;
+  cursor: default;
+}
+
+/*$btn-border-width: 1px !default;
+$btn-border-color: red !default;*/
+div.ux-menu {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  line-height: 18px;
+  box-sizing: border-box;
+  color: white;
+  border: 1px solid;
+  border-color: #CDDC39;
+  border-radius: 4px;
+  box-shadow: none;
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+div.ux-menu:focus {
+  outline: none;
+}
+
+ul.ux-menu {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  background: #444444;
+  font-size: 13px;
+}
+
+ul.ux-menu li {
+  margin: 0;
+  position: relative;
+  border: none;
+  background-color: inherit;
+  white-space: nowrap;
+}
+
+ul.ux-menu li a {
+  padding: 2px 4px 2px 4px;
+  display: block;
+  color: white;
+  outline: 0;
+  text-decoration: none;
+  cursor: default;
+}
+
+ul.ux-menu li a:hover {
+  color: white;
+  background-color: rgba(205, 220, 57, 0.2);
+}
+
+ul.ux-menu li a.selected, ul.ux-menu li a :active {
+  color: white;
+  background-color: rgba(205, 220, 57, 0.7);
+}
+
+ul.ux-menu li:first-child {
+  padding-top: 4px;
+}
+
+ul.ux-menu li:last-child {
+  padding-bottom: 4px;
+}
+
+ul.ux-menu li.disabled a, ul.ux-menu li[disabled] a {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+ul.ux-menu strong {
+  color: #3292e9;
+  font-weight: bold;
+}
+
+/*$btn-border-width: 1px !default;
+$btn-border-color: red !default;*/
+div.ux-input-menu {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  max-height: 126px;
+}
+
+input.ux-input[type=text]::-ms-clear, input[type=text].ux-input-btn::-ms-clear {
+  display: none;
+}
+
+input.ux-input, input.ux-input-btn, input.ux-input-btn[type=text], input.ux-input[type=text], input[type=text].ux-input-btn {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  border: 1px solid #CDDC39;
+  border-radius: 4px;
+  padding-left: 6px;
+  font-size: 13px;
+  line-height: 21px;
+  height: 21px;
+  color: white;
+  background-color: #444444;
+}
+
+input.ux-input:focus:not([disabled]), input.ux-input-btn:focus:not([disabled]), input.ux-input[type=text]:focus:not([disabled]), input[type=text].ux-input-btn:focus:not([disabled]) {
+  box-shadow: 0 0 5px rgba(221, 231, 122, 0.8);
+  border-color: #e3eb90;
+  outline-color: transparent;
+  outline-style: none;
+}
+
+input.ux-input:disabled, input.ux-input-btn:disabled, input.ux-input[type=text]:disabled, input[type=text].ux-input-btn:disabled {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(68, 68, 68, 0.5);
+  border-color: rgba(205, 220, 57, 0.5);
+}
+
+input.ux-input-btn, input.ux-input-btn[type=text] {
+  border-radius: 4px 0 0 4px;
+  border-right-width: 0;
+}
+
+input.ux-input[ux-state="open"], input[ux-state="open"].ux-input-btn {
+  border-bottom-left-radius: 0;
+}
+
+button.ux-input-btn {
+  border-radius: 0 4px 4px 0;
+  background: #CDDC39;
+  border-left: none;
+  box-shadow: none;
+  vertical-align: top;
+  color: #9daa1e;
+  padding: 0;
+}
+
+button.ux-input-btn:hover:not([disabled]) {
+  background-color: #b2c022;
+  color: #9daa1e;
+}
+
+button.ux-input-btn:active:not([disabled]) {
+  background-color: #89951a;
+  color: #cddc39;
+}
+
+button.ux-input-btn:before {
+  content: "▼";
+}
+
+button.ux-input-btn:disabled {
+  color: rgba(157, 170, 30, 0.3);
+  background: rgba(205, 220, 57, 0.5);
+  cursor: default;
+}
+
+button.ux-input-btn[ux-state="open"] {
+  border-bottom-right-radius: 0;
+}
+
+/*$btn-border-width: 1px !default;
+$btn-border-color: red !default;*/
+div.ux-scrollbar, div.ux-scrollbar div.ux-scrollbar-thumb {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: rgba(0, 148, 255, 0.3);
+  width: 12px;
+}
+
+div.ux-scrollbar div.ux-scrollbar-thumb {
+  background-color: rgba(79, 109, 252, 0.8);
+  width: 12px;
+  border-radius: 6px;
+}
