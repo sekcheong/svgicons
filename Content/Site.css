@@ -24,11 +24,19 @@ textarea {
 }
 
 
-
-
-line {
-	fill: none;	
-	stroke:#606060;
-	stroke-width: 1;	
+/*circle {
+	stroke-width:2;
 	shape-rendering: crispEdges;
 }
+
+line {
+	stroke-width: 2;	
+	shape-rendering: crispEdges;
+}
+
+
+rect {
+	fill: none;		
+	stroke-width: 2;	
+	shape-rendering: crispEdges;
+}*/
