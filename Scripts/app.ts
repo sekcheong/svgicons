@@ -6,18 +6,19 @@
 			
 			var svg = d3.select("body")
 				.append("svg")
-				.attr("width", 1024)
-				.attr("height", 1024);
+				.attr("width", 2048)
+				.attr("height", 2048);
 
-			var g = d3.select("svg").append("g");
-			g.attr("transform", "scale(0.5)");
+			var g = d3.select("svg").append("g");		
+			g.attr("transform", "translate(30,30) scale(0.5)");
+			
 			g.append("rect")
 				.attr("x", 0)
 				.attr("y", 0)
 				.attr("width", 1024)
 				.attr("fill", "none")
 				.attr("stroke-width", 1)
-				.attr("stroke", "#ffA0A0")
+				.attr("stroke", "#A0A0A0")
 				.attr("height", 1024);
 			
 			
