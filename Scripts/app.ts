@@ -14,27 +14,27 @@
 			g.append("rect")
 				.attr("x", 0)
 				.attr("y", 0)
-				.attr("width", l)
+				.attr("width", 1024)
 				.attr("fill", "none")
 				.attr("stroke-width", 1)
-				.attr("stroke", "#A0A0A0")
-				.attr("height", l);
+				.attr("stroke", "#ffA0A0")
+				.attr("height", 1024);
 			
 			
 			g.append("line")
 			  .attr("x1", 0)
 				.attr("y1", 0)
-				.attr("x2", l)
-				.attr("y2", l)
+				.attr("x2", 1024)
+				.attr("y2", 1024)
 				.attr("stroke-width", 1)
 				.attr("stroke", "#A0A0A0");
 
 			
 			g.append("line")
-				.attr("x1", l)
+				.attr("x1", 1024)
 				.attr("y1", 0)
 				.attr("x2", 0)
-				.attr("y2", l)
+				.attr("y2", 1024)
 				.attr("stroke-width", 1)
 				.attr("stroke", "#A0A0A0");
 
