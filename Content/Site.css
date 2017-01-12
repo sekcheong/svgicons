@@ -28,7 +28,7 @@ textarea {
 
 line {
 	fill: none;	
-	/*stroke:#606060;
+	stroke:#606060;
 	stroke-width: 1;	
-	shape-rendering: crispEdges;*/
+	shape-rendering: crispEdges;
 }
