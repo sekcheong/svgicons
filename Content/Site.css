@@ -24,19 +24,61 @@ textarea {
 }
 
 
-/*circle {
-	stroke-width:2;
+circle {
+	
 	shape-rendering: crispEdges;
+	
 }
 
 line {
-	stroke-width: 2;	
+	
 	shape-rendering: crispEdges;
+	
 }
 
 
 rect {
 	fill: none;		
-	stroke-width: 2;	
+	
 	shape-rendering: crispEdges;
-}*/
+	
+}
+
+line.check {
+	shape-rendering: crispEdges;
+	stroke:red;
+}
+
+rect.check {
+	shape-rendering: crispEdges;
+	stroke:red;
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src:url('~/Content/font.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-glass:before {
+  content: "\f000";
+}
